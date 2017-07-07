@@ -18,9 +18,9 @@ import eu.davidea.flexibleadapter.items.IHeader;
 import eu.davidea.viewholders.ExpandableViewHolder;
 
 public class VolumeHeaderItem
-        extends
+    extends
         AbstractItem<ExpandableHeaderViewHolder>
-        implements
+    implements
         IExpandable<ExpandableHeaderViewHolder, VolumeCellItem>,
         IHeader<ExpandableHeaderViewHolder> {
 

@@ -18,9 +18,9 @@ import eu.davidea.flexibleadapter.items.ISectionable;
 import eu.davidea.viewholders.FlexibleViewHolder;
 
 public class VolumeCellItem
-        extends
+    extends
         AbstractItem<VolumeCellItem.ChildViewHolder>
-        implements
+    implements
         ISectionable<VolumeCellItem.ChildViewHolder, IHeader> {
 
     private IHeader header;
