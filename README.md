@@ -1,38 +1,38 @@
-Guild Wars 2 API Viewer
-========================
-
-DEVELOPER: huhx0015
-
-### GUILD WARS 2 API VIEWER
-![gw2_apiviewer_preview](https://cloud.githubusercontent.com/assets/1645482/22623705/6f516bba-eb18-11e6-98e7-d2432e9b2579.gif)
+Comic Vine Search
+=================
 
 ## Description
 
-Guild Wars 2 API Viewer: An Android application used for viewing various Guild Wars 2 API endpoint responses. Guild Wars 2 API Viewer was developed utilizing MVVM architecture, in conjunction with Databinding, Dagger 2, Retrofit 2, and RxJava 2.
+ComicVineSearch shows how to call the Comic Vine API from Android Java.  The sample app searches for and displays volumes and issues along with their corresponding bitmaps.
 
-This application makes optional use of a Guild Wars 2 API key to access account-specific data. A Guild Wars 2 API key can be acquired at: https://account.arena.net/applications
+## API Key
 
-## Resources
+Grab a key from here: https://comicvine.gamespot.com/api/.  You'll need to enter the key in Settings to successfully get data from Comic Vine.
 
-### Documentation
+## Libraries
 
-* Guild Wars 2 API: https://wiki.guildwars2.com/wiki/API:Main
-
-### Libraries
-
+* Butterknife: https://github.com/JakeWharton/butterknife
 * Dagger 2: https://github.com/google/dagger
-* Picasso: http://square.github.io/picasso/
-* LeakCanary: https://github.com/square/leakcanary
-* RoundedImageView: https://github.com/vinc3m1/RoundedImageView
-* RxJava 2: https://github.com/ReactiveX/RxJava
-* RxAndroid: https://github.com/ReactiveX/RxAndroid
+* FlexibleAdapter: https://github.com/davideas/FlexibleAdapter
+* Glide: http://github.com/bumptech/glide
+* PhotoView: https://github.com/chrisbanes/PhotoView
 * Retrofit 2: http://square.github.io/retrofit/
-* RESTMock: https://github.com/andrzejchm/RESTMock
+* RxAndroid: https://github.com/ReactiveX/RxAndroid
+* RxJava 2: https://github.com/ReactiveX/RxJava
 
-## Copyright
+License
+=======
 
-GUILD WARS 2 API VIEWER is a fan application and is not associated with or endorsed by ARENANET.
+    Copyright 2017 Antonio Montes
 
-© GUILD WARS 2 is a registered trademark of ArenaNet, LLC., and NCSOFT Corporation.
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-All GUILD WARS 2 images, logos, names, and related media are intellectual properties of NCSOFT Corporation unless otherwise noted.
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.

@@ -68,10 +68,10 @@ public class MessageDialogFragment
         TextView messageView = dialogView.findViewById(R.id.message);
         messageView.setMovementMethod(LinkMovementMethod.getInstance());
         String html = getArguments().getString(ARG_MESSAGE);
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N)
+        //if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N)
             messageView.setText(Html.fromHtml(html));
-        else
-            messageView.setText(html);
+        //else
+        //    messageView.setText(html);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.AppTheme_AlertDialog);
         builder.setTitle(getArguments().getString(ARG_TITLE))
