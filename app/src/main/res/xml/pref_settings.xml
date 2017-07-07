@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:title="@string/settings"
+    android:summary="@string/settings_summary"
+    android:theme="@style/AppTheme.NoActionBar">
+
+    <PreferenceCategory
+        android:title="@string/CREDENTIALS"
+        android:key="pref_key_IL_credentials">
+
+        <Preference
+            android:key="pref_key_cv_credentials"
+            android:title="@string/cv_api_key">
+            <intent android:action=".activities.CredentialsActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/ABOUT">
+
+        <Preference
+            android:key="pref_key_application_version"
+            android:title="@string/pref_title_application_version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

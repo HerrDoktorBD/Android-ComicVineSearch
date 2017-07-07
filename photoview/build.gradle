@@ -1,0 +1,19 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion targetSdk
+    buildToolsVersion buildTools
+
+    defaultConfig {
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    // ANDROID SUPPORT LIBRARIES
+    compile supportDependencies.core_utils
+}

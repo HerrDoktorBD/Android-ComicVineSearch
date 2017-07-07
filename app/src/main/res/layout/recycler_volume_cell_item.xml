@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/coverImageView"
+
+        android:layout_margin="@dimen/margin_tiny"
+
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+
+        android:background="@drawable/cl_placeholder_3x"
+        android:contentDescription="@string/volume_image" />
+
+    <LinearLayout
+        android:id="@+id/title_container"
+
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_toEndOf="@+id/coverImageView">
+
+        <RelativeLayout
+            android:paddingTop="@dimen/margin_tiny"
+            android:paddingBottom="@dimen/margin_tiny"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <!-- headerLabel -->
+            <TextView
+                android:id="@+id/title"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="end"
+                android:maxLines="1"
+
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+
+                tools:text="header label" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:paddingTop="@dimen/margin_tiny"
+            android:paddingBottom="@dimen/margin_tiny"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <!-- bookCountLabel -->
+            <TextView
+                android:id="@+id/bookCountLabel"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:maxLines="1"
+
+                android:textAppearance="@android:style/TextAppearance.Small"
+
+                tools:text="book count label" />
+
+            <ImageView
+                android:id="@+id/statusImageView"
+
+                android:layout_marginEnd="@dimen/margin_tiny"
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <!-- view on comicvine -->
+        <RelativeLayout
+            android:paddingTop="@dimen/margin_tiny"
+            android:paddingBottom="@dimen/margin_tiny"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/worldView"
+
+                android:layout_marginEnd="@dimen/margin_tiny"
+
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+
+                android:contentDescription="@string/world_view" />
+
+            <TextView
+                android:id="@+id/viewOnComicvineLabel"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_toEndOf="@+id/worldView"
+
+                android:maxLines="1"
+
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/colorPrimary"
+
+                tools:text="view on comic vine label" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

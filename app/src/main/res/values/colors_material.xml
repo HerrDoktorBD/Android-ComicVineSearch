@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="material_text_color_white_text">#deffffff</color>
+
+    <!-- Colors suggested as Material themes via the Design Guidelines -->
+    <!-- http://www.google.com/design/spec/style/color.html#color-ui-color-palette -->
+
+    <color name="material_text_color_purple_500">@color/material_text_color_white_text</color>
+
+</resources>

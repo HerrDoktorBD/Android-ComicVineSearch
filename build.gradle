@@ -1,0 +1,93 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+ext {
+    //Author
+    //developerId = ""
+    //developerName = ""
+    //developerEmail = ""
+
+    // https://stackoverflow.com/questions/21405457/autoincrement-versioncode-with-gradle-extra-properties
+    _versionCode = 0
+    def versionPropsFile = file('version.properties')
+    def Properties versionProps = new Properties()
+    if (versionPropsFile.exists())
+        versionProps.load(new FileInputStream(versionPropsFile))
+    def _patch = (versionProps['PATCH'] ?: "0").toInteger() + 1
+    def _major = (versionProps['MAJOR'] ?: "0").toInteger()
+    def _minor = (versionProps['MINOR'] ?: "0").toInteger()
+    List<String> runTasks = gradle.startParameter.getTaskNames();
+    def value = 0
+    for (String item : runTasks)
+        if (item.contains("assembleRelease")) {
+            value = 1;
+        }
+    _versionCode = (versionProps['VERSION_CODE'] ?: "0").toInteger() + value
+    if (_patch == 99) {
+        _patch = 0
+        _minor = _minor + 1
+    }
+    if (_major == 99) {
+        _major = 0
+        _major = _major + 1
+    }
+
+    versionProps['MAJOR'] = _major.toString()
+    versionProps['MINOR'] = _minor.toString()
+    versionProps['PATCH'] = _patch.toString()
+    versionProps['VERSION_CODE'] = _versionCode.toString()
+    versionProps.store(versionPropsFile.newWriter(), null)
+
+    _versionName = "${_major}.${_versionCode}.${_minor}.${_patch}"
+
+    _buildDate = " built on " + getDate()
+
+    // Support and Build tools version
+    minSdk = 21
+    targetSdk = 26
+    buildTools = "26.0.0"
+    supportLib = "25.4.0"
+
+    // Support Libraries dependencies
+    supportDependencies = [
+            annotations : "com.android.support:support-annotations:${supportLib}",
+            appcompat   : "com.android.support:appcompat-v7:${supportLib}",
+            cardview    : "com.android.support:cardview-v7:${supportLib}",
+            core_utils  : "com.android.support:support-core-utils:${supportLib}",
+            design      : "com.android.support:design:${supportLib}",
+            recyclerview: "com.android.support:recyclerview-v7:${supportLib}",
+            support     : "com.android.support:support-v13:${supportLib}"
+    ]
+}
+
+static String getDate() {
+    def date = new Date()
+    return date.format('yyyy.MM.dd')
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'me.tatarka:gradle-retrolambda:3.3.0'
+
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6"
+        classpath "org.jfrog.buildinfo:build-info-extractor-gradle:3.1.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://maven.google.com" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,90 @@
+<resources>
+
+    <string name="title_activity_show_issues">ShowIssuesActivity</string>
+
+    <!--  Action Mode Menu Items -->
+    <string name="delete">Delete</string>
+    <string name="copy">Copy</string>
+    <string name="forward">Forward</string>
+
+    <!-- Actions -->
+    <string name="action_search_volumes">Search Volumes…</string>
+    <string name="action_search_issues">Search Issues…</string>
+    <string name="action_search">Search</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="tab_issues">Issues</string>
+    <string name="tab_volumes">Volumes</string>
+
+    <!-- About -->
+    <string name="app_name">COMIC VINE SEARCH</string>
+    <string name="about_title">About Comic Vine Search</string>
+    <string name="about_version">%1$s</string>
+    <string name="about_body"><![CDATA[
+<b>Comic Vine Search</b><br/>
+%1$s
+
+<br/><br/><b>Author</b><br/>
+<a href="https://plus.google.com/u/0/114314282649386957411">Tony Montes on G+</a>
+
+<br/><br/><b>Contact</b><br/>
+<a href="https://github.com/HerrDoktorBD">Github Profile</a>
+
+<br/><br/><b>License</b><br/>
+Copyright © 2017 Antonio Montes.
+<br/><br/>Licensed under the Apache License, Version 2.0 (the "License");
+You may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+<br/><br/><a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
+
+<br/><br/>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+<br/>See the License for the specific language governing permissions and
+limitations under the License.
+]]></string>
+
+    <string name="cv_logo">comicvine logo</string>
+    <string name="volume_image">volume image</string>
+    <string name="world_view">world view</string>
+    <string name="view_on_cv">View on Comic Vine</string>
+
+    <!-- Strings related to Settings -->
+    <string name="settings">Settings</string>
+    <string name="settings_summary">Search Comic Vine Preferences</string>
+
+    <string name="CREDENTIALS">CREDENTIALS</string>
+    <string name="ABOUT">ABOUT</string>
+
+    <string name="pref_title_application_version">App version</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="ErrorFetchingVolumes">Error fetching volumes</string>
+    <string name="ErrorFetchingIssues">Error fetching issues</string>
+    <string name="NoResultsFound">No Results Found.</string>
+    <string name="VolFormat">Vol. %1$s</string>
+    <string name="IssFormat">#%1$s</string>
+    <string name="OK">OK</string>
+    <string name="issue">issue</string>
+    <string name="issues">issues</string>
+    <string name="save">Save</string>
+
+    <string name="cv_info">ComicLand can get information about comics and their covers from Comic Vine. To use these features you can register with Comic Vine and request an API key.</string>
+    <string name="cv_register_text">Register with Comic Vine</string>
+    <string name="cv_devkey_text">Request a Comic Vine API key</string>
+    <string name="cv_gotkey">Once you have an API key, enter it below and it will be used to get data and covers from Comic Vine.</string>
+    <string name="api_key">API Key</string>
+    <string name="incorrect_cv_key">Your Comic Vine API key was incorrect, or we could not connect to the network to verify it.</string>
+    <string name="correct_cv_key">Your Comic Vine API key is valid.</string>
+    <string name="cv_api_key">Comic Vine API Key</string>
+    <string name="cv_credentials">Comic Vine Credentials</string>
+
+    <string name="network_not_available">Network not available, cannot connect to network.</string>
+
+    <!-- main navigation -->
+    <string name="SearchComicVine">Search Comic Vine</string>
+
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#067AB5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#067AB5</color>
+
+    <color name="colorTitleText">#ffffffff</color>
+
+    <!-- Light Theme -->
+    <color name="colorPrimary_light">#067AB5</color>
+    <color name="colorPrimaryDark_light">#512da8</color><!-- Deep Purple 700 -->
+
+    <color name="colorAccent_light">#ff4081</color><!-- Pink A200 -->
+    <!-- Pink A700: for statusBar in actionMode -->
+    <color name="colorPrimaryText_light">#de000000</color>
+
+    <color name="dim_fg_material_dark">#ffbebebe</color>
+
+    <!-- Common colors -->
+    <color name="list_choice_normal_bg_light">#fffafafa</color>
+    <color name="list_choice_pressed_bg_light">#fccc</color>
+
+    <color name="black">#000</color>
+    <color name="white">#ffffffff</color>
+    <color name="red">#F00</color>
+
+    <color name="colorComicland">#067AB5</color>
+
+    <!--Indigo 500-->
+    <!--Indigo 700-->
+    <!--Pink 500-->
+    <!--Pink 700-->
+
+    <color name="link_blue">#006699</color>
+
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Comic Vine API</string>
+
+    <string name="CV_PREFS_NAME">cv_prefs</string>
+    <string name="CV_APIKEY_PREF_NAME">cv_apikey</string>
+
+    <string name="cv_com">https://auth.comicvine.gamespot.com/signup/</string>
+    <string name="cv_key">http://comicvine.gamespot.com/api/</string>
+    <string name="BASE_URL">http://comicvine.gamespot.com/api/</string>
+
+</resources>
