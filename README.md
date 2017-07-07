@@ -12,7 +12,6 @@ Grab a key from here: https://comicvine.gamespot.com/api/.  You'll need to enter
 ## Libraries
 
 * Butterknife: https://github.com/JakeWharton/butterknife
-* Dagger 2: https://github.com/google/dagger
 * FlexibleAdapter: https://github.com/davideas/FlexibleAdapter
 * Glide: http://github.com/bumptech/glide
 * PhotoView: https://github.com/chrisbanes/PhotoView
