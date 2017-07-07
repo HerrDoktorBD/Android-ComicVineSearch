@@ -19,7 +19,7 @@ import com.tonymontes.comicvinesearch.listeners.OnFragmentInteractionListener;
 import eu.davidea.flexibleadapter.common.SmoothScrollLinearLayoutManager;
 
 public abstract class AbstractFragment
-        extends
+    extends
         Fragment {
 
     public static final String TAG = AbstractFragment.class.getSimpleName();

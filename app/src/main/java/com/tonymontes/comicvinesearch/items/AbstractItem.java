@@ -7,7 +7,7 @@ import eu.davidea.flexibleadapter.items.AbstractFlexibleItem;
 import eu.davidea.viewholders.FlexibleViewHolder;
 
 abstract class AbstractItem<VH extends FlexibleViewHolder>
-        extends
+    extends
         AbstractFlexibleItem<VH> {
 
     protected String id;

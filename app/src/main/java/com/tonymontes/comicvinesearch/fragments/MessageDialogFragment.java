@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.tonymontes.comicvinesearch.R;
 
 public class MessageDialogFragment
-        extends
+    extends
         DialogFragment {
 
     public static final String TAG = MessageDialogFragment.class.getSimpleName();

@@ -37,7 +37,7 @@ import static com.tonymontes.comicvine.utils.constants.getIssuesForVolumeWithCvI
  * It contains details about Comicvine links and how to register for an API key.
  */
 public class CredentialsActivity
-        extends
+    extends
         FragmentActivity {
 
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();

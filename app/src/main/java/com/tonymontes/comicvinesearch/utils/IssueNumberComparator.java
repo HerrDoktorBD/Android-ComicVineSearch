@@ -1,3 +1,4 @@
+
 package com.tonymontes.comicvinesearch.utils;
 
 import com.tonymontes.comicvine.Issue;

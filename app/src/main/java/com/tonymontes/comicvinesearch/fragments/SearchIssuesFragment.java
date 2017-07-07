@@ -43,20 +43,16 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchIssuesFragment
-        extends
+    extends
         Fragment
-        implements
+    implements
         SearchIssuesAdapter.IssueCellListener {
 
     // bind components to variables
-    @BindView(R.id.progressBar)
-    ProgressBar progress;
-    @BindView(R.id.swipeRefreshLayout)
-    SwipeRefreshLayout swipeRefreshLayout;
-    @BindView(R.id.recycler_view)
-    RecyclerView recyclerView;
-    @BindView(R.id.fab)
-    FloatingActionButton mFab;
+    @BindView(R.id.progressBar) ProgressBar progress;
+    @BindView(R.id.swipeRefreshLayout) SwipeRefreshLayout swipeRefreshLayout;
+    @BindView(R.id.recycler_view) RecyclerView recyclerView;
+    @BindView(R.id.fab) FloatingActionButton mFab;
 
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
 

@@ -9,7 +9,6 @@ import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Build;
 import android.os.Looper;
 import android.text.ParcelableSpan;
 import android.text.Spannable;
@@ -43,24 +42,6 @@ public final class Utils {
 
     public static int dpToPx(Context context, float dp) {
         return Math.round(dp * getDisplayMetrics(context).density);
-    }
-
-    /**
-     * API 21
-     *
-     * @see Build.VERSION_CODES#LOLLIPOP
-     */
-    public static boolean hasLollipop() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
-    }
-
-    /**
-     * API 23
-     *
-     * @see Build.VERSION_CODES#M
-     */
-    public static boolean hasMarshmallow() {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
     }
 
     public static String getVersionName(Context context) {

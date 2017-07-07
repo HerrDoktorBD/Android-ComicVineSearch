@@ -40,22 +40,18 @@ import eu.davidea.flexibleadapter.utils.Log;
 
 @SuppressWarnings({"ConstantConditions", "unchecked"})
 public class MainActivity
-        extends
+    extends
         AppCompatActivity
-        implements
+    implements
         FlexibleAdapter.OnItemClickListener,             // onItemClick
         NavigationView.OnNavigationItemSelectedListener, // onNavigationItemSelected
         OnFragmentInteractionListener {                  // onFragmentChange
 
     // bind components to variables
-    @BindView(R.id.toolbar)
-    Toolbar mToolbar;
-    @BindView(R.id.drawer_layout)
-    DrawerLayout mDrawer;
-    @BindView(R.id.nav_view)
-    NavigationView mNavigationView;
-    @BindView(R.id.toolbar_header_view)
-    HeaderView mHeaderView;
+    @BindView(R.id.toolbar) Toolbar mToolbar;
+    @BindView(R.id.drawer_layout) DrawerLayout mDrawer;
+    @BindView(R.id.nav_view) NavigationView mNavigationView;
+    @BindView(R.id.toolbar_header_view) HeaderView mHeaderView;
 
     private static final String STATE_ACTIVE_FRAGMENT = "active_fragment";
 
