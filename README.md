@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/HerrDoktorBD/Android-ComicVineSearch.svg?branch=master)](https://travis-ci.org/HerrDoktorBD/Android-ComicVineSearch)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f5e6dda286ac4a0fa9bb03fbc18a43bd)](https://www.codacy.com/app/HerrDoktorBD/Android-ComicVineSearch?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=HerrDoktorBD/Android-ComicVineSearch&amp;utm_campaign=Badge_Grade)
 Comic Vine Search
 =================
 
