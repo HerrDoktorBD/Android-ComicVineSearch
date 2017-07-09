@@ -13,8 +13,7 @@ import butterknife.ButterKnife;
 
 public class HeaderView extends LinearLayout {
 
-    @BindView(R.id.header_view_title)
-    TextView title;
+    @BindView(R.id.header_view_title) protected TextView title;
 
     public HeaderView(Context context) {
         this(context, null);

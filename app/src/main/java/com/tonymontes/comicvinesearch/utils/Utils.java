@@ -285,7 +285,7 @@ public final class Utils {
             return this;
         }
 
-        SpannableStringBuilder build() {
+        private SpannableStringBuilder build() {
             SpannableStringBuilder ssb = new SpannableStringBuilder(stringBuilder.toString());
             for (SpanSection section : spanSections) {
                 section.apply(ssb);
