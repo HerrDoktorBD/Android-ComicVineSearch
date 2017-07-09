@@ -11,6 +11,11 @@
             android:title="@string/SearchComicVine" />
 
         <item
+            android:id="@+id/nav_settings"
+            android:title="@string/action_settings"
+            android:icon="@drawable/ic_settings_white" />
+
+        <item
             android:id="@+id/nav_about"
             android:title="@string/about_title"
             android:icon="@drawable/ic_about_white" />

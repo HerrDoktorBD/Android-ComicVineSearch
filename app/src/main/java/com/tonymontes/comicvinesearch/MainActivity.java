@@ -36,7 +36,6 @@ import butterknife.ButterKnife;
 import eu.davidea.flexibleadapter.FlexibleAdapter;
 import eu.davidea.flexibleadapter.items.AbstractFlexibleItem;
 import eu.davidea.flexibleadapter.items.IFlexible;
-import eu.davidea.flexibleadapter.utils.Log;
 
 @SuppressWarnings({"ConstantConditions", "unchecked"})
 public class MainActivity
@@ -151,6 +150,14 @@ public class MainActivity
                 mFragment = SearchVolumesFragment.newInstance();
                 break;
             }
+            case R.id.nav_settings: {
+
+                startSettingsActivity();
+
+                // close drawer
+                mDrawer.closeDrawers();
+                return true;
+            }
             case R.id.nav_about: {
 
                 MessageDialogFragment.newInstance(
@@ -210,7 +217,7 @@ public class MainActivity
             }
             case R.id.action_settings: {
 
-                startActivity(new Intent(this, SettingsActivity.class));
+                startSettingsActivity();
                 break;
             }
             default:
@@ -237,7 +244,6 @@ public class MainActivity
 
     @Override
     public boolean onItemClick(int position) {
-        Log.d("onItemClick");
 
         // notify active callbacks or implement a custom action onClick
         IFlexible flexibleItem = mAdapter.getItem(position);
@@ -267,6 +273,11 @@ public class MainActivity
         };
         int requestCode = 200;
         requestPermissions(permissions, requestCode);
+    }
+
+    private void startSettingsActivity() {
+
+        startActivity(new Intent(this, SettingsActivity.class));
     }
 
     private boolean getIssuesForVolumeWithCvID(String title, String comicvineID) {

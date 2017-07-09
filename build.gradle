@@ -52,8 +52,10 @@ ext {
             annotations : "com.android.support:support-annotations:${supportLib}",
             appcompat   : "com.android.support:appcompat-v7:${supportLib}",
             cardview    : "com.android.support:cardview-v7:${supportLib}",
+            core_ui     : "com.android.support:support-core-ui:$supportLib",
             core_utils  : "com.android.support:support-core-utils:${supportLib}",
             design      : "com.android.support:design:${supportLib}",
+            fragment    : "com.android.support:support-fragment:$supportLib",
             recyclerview: "com.android.support:recyclerview-v7:${supportLib}",
             support     : "com.android.support:support-v13:${supportLib}"
     ]
