@@ -11,15 +11,6 @@ import java.util.List;
 
 public class ComicvineVolumesResponse {
 
-    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
-    // "http://comicvine.gamespot.com/api/volumes/?api_key=YOUR_KEY&format=json&filter=name:Mortimer";
-
-    public static ComicvineVolumesResponse parseJSON(String response) {
-
-        Gson gson = new GsonBuilder().create();
-        return gson.fromJson(response, ComicvineVolumesResponse.class);
-    }
-
     @SerializedName("error")
     @Expose
     private String error;
@@ -107,5 +98,14 @@ public class ComicvineVolumesResponse {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
+    // "http://comicvine.gamespot.com/api/volumes/?api_key=YOUR_KEY&format=json&filter=name:Mortimer";
+
+    public static ComicvineVolumesResponse parseJSON(String response) {
+
+        Gson gson = new GsonBuilder().create();
+        return gson.fromJson(response, ComicvineVolumesResponse.class);
     }
 }

@@ -13,14 +13,6 @@ import com.tonymontes.comicvine.Issue;
 
 public class ComicvineIssueResponse {
 
-    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
-    // "http://comicvine.gamespot.com/api/issue/4000-30019/?api_key=YOUR_KEY&format=json";
-    public static ComicvineIssueResponse parseJSON(String response) {
-
-        Gson gson = new GsonBuilder().create();
-        return gson.fromJson(response, ComicvineIssueResponse.class);
-    }
-
     @SerializedName("error")
     @Expose
     private String error;
@@ -108,5 +100,13 @@ public class ComicvineIssueResponse {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
+    // "http://comicvine.gamespot.com/api/issue/4000-30019/?api_key=YOUR_KEY&format=json";
+    public static ComicvineIssueResponse parseJSON(String response) {
+
+        Gson gson = new GsonBuilder().create();
+        return gson.fromJson(response, ComicvineIssueResponse.class);
     }
 }

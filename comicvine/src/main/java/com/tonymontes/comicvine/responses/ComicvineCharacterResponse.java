@@ -8,14 +8,6 @@ import com.google.gson.annotations.SerializedName;
 
 public class ComicvineCharacterResponse {
 
-    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
-    // "http://comicvine.gamespot.com/api/person/4040-83794/?api_key=YOUR_KEY&format=json"
-    public static ComicvineCharacterResponse parseJSON(String response) {
-
-        Gson gson = new GsonBuilder().create();
-        return gson.fromJson(response, ComicvineCharacterResponse.class);
-    }
-
     @SerializedName("error")
     @Expose
     private String error;
@@ -103,5 +95,13 @@ public class ComicvineCharacterResponse {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
+    // "http://comicvine.gamespot.com/api/person/4040-83794/?api_key=YOUR_KEY&format=json"
+    public static ComicvineCharacterResponse parseJSON(String response) {
+
+        Gson gson = new GsonBuilder().create();
+        return gson.fromJson(response, ComicvineCharacterResponse.class);
     }
 }

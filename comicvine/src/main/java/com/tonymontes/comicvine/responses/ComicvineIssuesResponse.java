@@ -15,19 +15,6 @@ import java.util.List;
 
 public class ComicvineIssuesResponse {
 
-    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
-    // "http://comicvine.gamespot.com/api/issues/?api_key=f363cf3bc6d6a385f9df0353fb3251f4ef8b0fc6&format=json&sort=issue_number:asc&filter=volume:21117"
-    public static ComicvineIssuesResponse parseJSON(String json) throws IOException {
-
-        try {
-            Gson gson = new GsonBuilder().create();
-            return gson.fromJson(json, ComicvineIssuesResponse.class);
-        } catch (JsonParseException jpe) {
-            Log.w("ComicvineIssuesResponse", jpe);
-            throw new IOException("JSON Parse Exception");
-        }
-    }
-
     @SerializedName("error")
     @Expose
     private String error;
@@ -115,5 +102,18 @@ public class ComicvineIssuesResponse {
 
     public void setVersion(String version) {
         this.version = version;
+    }
+
+    // generated at http://www.jsonschema2pojo.org/ with source type JSON and annotation style GSON with JSON from:
+    // "http://comicvine.gamespot.com/api/issues/?api_key=YOUR-KEY&format=json&sort=issue_number:asc&filter=volume:21117"
+    public static ComicvineIssuesResponse parseJSON(String json) throws IOException {
+
+        try {
+            Gson gson = new GsonBuilder().create();
+            return gson.fromJson(json, ComicvineIssuesResponse.class);
+        } catch (JsonParseException jpe) {
+            Log.w("ComicvineIssuesResponse", jpe);
+            throw new IOException("JSON Parse Exception");
+        }
     }
 }
