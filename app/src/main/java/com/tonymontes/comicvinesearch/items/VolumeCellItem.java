@@ -30,10 +30,6 @@ public class VolumeCellItem
     private String comicvineID;
     private String issueSearchTitle;
 
-    public VolumeCellItem() {
-        super();
-    }
-
     @Override
     public IHeader getHeader() {
         return header;
@@ -86,16 +82,16 @@ public class VolumeCellItem
 
     static final class ChildViewHolder extends FlexibleViewHolder {
 
-        String comicvineID;
-        String issueSearchTitle;
-        Context context;
+        private String comicvineID;
+        private String issueSearchTitle;
+        private Context context;
 
-        ImageView coverImageView;
-        TextView headerLabel;
-        TextView bookCountLabel;
-        TextView viewOnComicvineLabel;
-        ImageView worldView;
-        ImageView statusImageView;
+        private ImageView coverImageView;
+        private TextView headerLabel;
+        private TextView bookCountLabel;
+        private TextView viewOnComicvineLabel;
+        private ImageView worldView;
+        private ImageView statusImageView;
 
         ChildViewHolder(View view, FlexibleAdapter adapter) {
             super(view, adapter);

@@ -5,7 +5,7 @@ package com.tonymontes.comicvine.utils;
  * Created by tony on 3/6/17.
  */
 
-public class constants {
+public class Constants {
 
     static public final String cvFormat = "json";
     static public int cvLimit = 10;

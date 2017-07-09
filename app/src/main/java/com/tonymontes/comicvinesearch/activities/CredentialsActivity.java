@@ -28,7 +28,7 @@ import io.reactivex.schedulers.Schedulers;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import static com.tonymontes.comicvine.utils.constants.getIssuesForVolumeWithCvID;
+import static com.tonymontes.comicvine.utils.Constants.getIssuesForVolumeWithCvID;
 
 /**
  * Created by tony on 3/20/17.

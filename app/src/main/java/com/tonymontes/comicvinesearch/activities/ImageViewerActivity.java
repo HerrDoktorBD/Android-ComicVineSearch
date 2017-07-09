@@ -31,7 +31,7 @@ import com.tonymontes.comicvinesearch.R;
 import static android.R.attr.uiOptions;
 
 public class ImageViewerActivity
-        extends
+    extends
         AppCompatActivity {
 
     private String[] images;
@@ -98,7 +98,7 @@ public class ImageViewerActivity
 
         @Override
         public boolean isViewFromObject(View view, Object object) {
-            return view == object;
+            return view.equals(object);
         }
     }
 

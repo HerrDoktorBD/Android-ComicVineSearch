@@ -27,7 +27,7 @@ import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import com.tonymontes.comicvine.Volume;
 import com.tonymontes.comicvine.network.ComicvineInterface;
 import com.tonymontes.comicvine.responses.ComicvineVolumesResponse;
-import com.tonymontes.comicvine.utils.constants;
+import com.tonymontes.comicvine.utils.Constants;
 import com.tonymontes.comicvinesearch.R;
 import com.tonymontes.comicvinesearch.activities.SearchIssuesActivity;
 import com.tonymontes.comicvinesearch.adapters.SearchVolumesAdapter;
@@ -45,7 +45,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchVolumesFragment
-        extends
+    extends
         AbstractFragment {
 
     private static String key = "searchQuery";
@@ -68,7 +68,7 @@ public class SearchVolumesFragment
     private boolean collapsingSearchView = true;
     private boolean isSearching = false;
 
-    private int searchType = constants.getVolumesForSearchTerm;
+    private int searchType = Constants.getVolumesForSearchTerm;
     private String searchTermOrCvID;
     private String cvQuery;
 
@@ -94,9 +94,6 @@ public class SearchVolumesFragment
     public static SearchVolumesFragment newInstance() {
 
         return new SearchVolumesFragment();
-    }
-
-    public SearchVolumesFragment() {
     }
 
     @Override
@@ -254,6 +251,7 @@ public class SearchVolumesFragment
                     searchTermOrCvID = null;
                     searchView.setSubmitButtonEnabled(false);
                 } else {
+
                     searchTermOrCvID = newText;
                     searchView.setSubmitButtonEnabled(true);
                 }
@@ -286,15 +284,17 @@ public class SearchVolumesFragment
                 if (searchView != null)
                     searchView.setQueryHint(getHint(tabPos));
 
-                searchType = (tabPos == searchScopeVolumes) ? constants.getVolumesForSearchTerm : constants.getIssuesForSearchTerm;
+                searchType = (tabPos == searchScopeVolumes) ? Constants.getVolumesForSearchTerm : Constants.getIssuesForSearchTerm;
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                // noop
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+                // noop
             }
         });
 
@@ -338,11 +338,11 @@ public class SearchVolumesFragment
             return;
         }
 
-        if (searchType == constants.getVolumesForSearchTerm) {
+        if (searchType == Constants.getVolumesForSearchTerm) {
 
             showProgressBar();
             makeRequest();
-        } else // constants.getIssuesForSearchTerm
+        } else // Constants.getIssuesForSearchTerm
 
             launchSearchIssuesActivity(searchTermOrCvID);
     }

@@ -95,8 +95,8 @@ public class VolumeHeaderItem
 
     static class ExpandableHeaderViewHolder extends ExpandableViewHolder {
 
-        ImageView carat;
-        TextView mTitle;
+        private ImageView carat;
+        private TextView mTitle;
 
         ExpandableHeaderViewHolder(View view, FlexibleAdapter adapter) {
             super(view, adapter, true);

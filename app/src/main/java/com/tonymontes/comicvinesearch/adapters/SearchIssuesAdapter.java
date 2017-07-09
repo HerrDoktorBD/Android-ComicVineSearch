@@ -10,7 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -21,7 +20,7 @@ import com.tonymontes.comicvinesearch.utils.Utils;
 import java.util.List;
 
 public class SearchIssuesAdapter
-        extends
+    extends
         RecyclerView.Adapter<SearchIssuesAdapter.MyViewHolder> {
 
     private Context context;
@@ -32,21 +31,19 @@ public class SearchIssuesAdapter
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        RelativeLayout issueContainer;
-        ImageView coverImageView;
-        LinearLayout titleContainer;
-        TextView headerLabel;
-        TextView plotLabel;
-        ImageView iconOwned;
+        private RelativeLayout issueContainer;
+        private ImageView coverImageView;
+        private TextView headerLabel;
+        private TextView plotLabel;
+        private ImageView iconOwned;
 
-        RelativeLayout iconCheck;
+        private RelativeLayout iconCheck;
 
         MyViewHolder(View view) {
             super(view);
 
             issueContainer = view.findViewById(R.id.comicvine_issue_container);
             coverImageView = view.findViewById(R.id.cover_imageView);
-            titleContainer = view.findViewById(R.id.title_container);
             headerLabel = view.findViewById(R.id.title);
             plotLabel = view.findViewById(R.id.plot_label);
             iconOwned = view.findViewById(R.id.icon_owned);

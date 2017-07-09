@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.tonymontes.comicvine.utils.constants;
+import com.tonymontes.comicvine.utils.Constants;
 import com.tonymontes.comicvinesearch.activities.SearchIssuesActivity;
 import com.tonymontes.comicvinesearch.activities.SettingsActivity;
 import com.tonymontes.comicvinesearch.fragments.AbstractFragment;
@@ -48,10 +48,10 @@ public class MainActivity
         OnFragmentInteractionListener {                  // onFragmentChange
 
     // bind components to variables
-    @BindView(R.id.toolbar) Toolbar mToolbar;
-    @BindView(R.id.drawer_layout) DrawerLayout mDrawer;
-    @BindView(R.id.nav_view) NavigationView mNavigationView;
-    @BindView(R.id.toolbar_header_view) HeaderView mHeaderView;
+    @BindView(R.id.toolbar) protected Toolbar mToolbar;
+    @BindView(R.id.drawer_layout) protected DrawerLayout mDrawer;
+    @BindView(R.id.nav_view) protected NavigationView mNavigationView;
+    @BindView(R.id.toolbar_header_view) protected HeaderView mHeaderView;
 
     private static final String STATE_ACTIVE_FRAGMENT = "active_fragment";
 
@@ -273,7 +273,7 @@ public class MainActivity
 
         if (!comicvineID.isEmpty() && !comicvineID.equals("0")) {
 
-            int searchType = constants.getIssuesForVolumeWithCvID;
+            int searchType = Constants.getIssuesForVolumeWithCvID;
 
             String cvQuery = Utils.buildQuery(searchType, comicvineID, "", 0); // get apikey from settings
             if (cvQuery == null || cvQuery.isEmpty()) {

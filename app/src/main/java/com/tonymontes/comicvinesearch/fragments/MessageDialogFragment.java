@@ -23,9 +23,6 @@ public class MessageDialogFragment
     public static final String ARG_TITLE = "title";
     public static final String ARG_MESSAGE = "message";
 
-    public MessageDialogFragment() {
-    }
-
     /**
      * Use from Activities.
      *

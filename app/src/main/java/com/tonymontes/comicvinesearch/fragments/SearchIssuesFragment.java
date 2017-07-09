@@ -49,10 +49,10 @@ public class SearchIssuesFragment
         SearchIssuesAdapter.IssueCellListener {
 
     // bind components to variables
-    @BindView(R.id.progressBar) ProgressBar progress;
-    @BindView(R.id.swipeRefreshLayout) SwipeRefreshLayout swipeRefreshLayout;
-    @BindView(R.id.recycler_view) RecyclerView recyclerView;
-    @BindView(R.id.fab) FloatingActionButton mFab;
+    @BindView(R.id.progressBar) protected ProgressBar progress;
+    @BindView(R.id.swipeRefreshLayout) protected SwipeRefreshLayout swipeRefreshLayout;
+    @BindView(R.id.recycler_view) protected RecyclerView recyclerView;
+    @BindView(R.id.fab) protected FloatingActionButton mFab;
 
     private CompositeDisposable mCompositeDisposable = new CompositeDisposable();
 
@@ -331,6 +331,9 @@ public class SearchIssuesFragment
                 case R.id.action_forward:
 
                     Utils.showToast("You selected the Forward menu.");
+                    break;
+
+                default:
                     break;
             }
 

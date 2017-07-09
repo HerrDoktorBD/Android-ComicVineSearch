@@ -21,7 +21,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
-import com.tonymontes.comicvine.utils.constants;
+import com.tonymontes.comicvine.utils.Constants;
 import com.tonymontes.comicvinesearch.R;
 import com.tonymontes.comicvinesearch.app.ComicvineSearch;
 
@@ -128,109 +128,109 @@ public final class Utils {
 
         switch (requestCode) {
 
-            case constants.getDetailsForCharacterWithCvID: {
+            case Constants.getDetailsForCharacterWithCvID: {
 
                 sb.append("character/4005-");
                 sb.append(searchTermOrCvID);
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
 
                 //query = "http://comicvine.gamespot.com/api/character/4005-108021/?api_key=YOUR_KEY&format=json";
                 break;
             }
-            case constants.getDetailsForIssueWithCvID: {
+            case Constants.getDetailsForIssueWithCvID: {
 
                 sb.append("issue/4000-");
                 sb.append(searchTermOrCvID);
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
 
                 //query = "http://comicvine.gamespot.com/api/issue/4000-30019/?api_key=YOUR_KEY&format=json";
                 break;
             }
-            case constants.getDetailsForPersonWithCvID: {
+            case Constants.getDetailsForPersonWithCvID: {
 
                 sb.append("person/4040-");
                 sb.append(searchTermOrCvID);
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
 
                 //query = "http://comicvine.gamespot.com/api/person/4040-83794/?api_key=YOUR_KEY&format=json";
                 break;
             }
-            case constants.getDetailsForPublisherWithCvID: {
+            case Constants.getDetailsForPublisherWithCvID: {
 
                 sb.append("publisher/4010-");
                 sb.append(searchTermOrCvID);
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
 
                 //query = "http://comicvine.gamespot.com/api/publisher/4010-3662/?api_key=YOUR_KEY&format=json";
                 break;
             }
-            case constants.getDetailsForVolumeWithCvID: {
+            case Constants.getDetailsForVolumeWithCvID: {
 
                 sb.append("volume/4050-");
                 sb.append(searchTermOrCvID);
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
 
                 //query = "http://comicvine.gamespot.com/api/volume/4050-39022/?api_key=YOUR_KEY&format=json";
                 break;
             }
-            case constants.getVolumesForSearchTerm: {
+            case Constants.getVolumesForSearchTerm: {
 
                 sb.append("volumes");
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
                 sb.append("&offset=");
                 sb.append(String.valueOf(cvOffset));
                 sb.append("&limit=");
-                sb.append(constants.cvLimit);
+                sb.append(Constants.cvLimit);
                 sb.append("&filter=name:");
                 sb.append(searchTermOrCvID);
 
                 //query = "http://comicvine.gamespot.com/api/volumes/?api_key=YOUR_KEY&format=json&filter=name:Mortimer";
                 break;
             }
-            case constants.getIssuesForVolumeWithCvID: {
+            case Constants.getIssuesForVolumeWithCvID: {
 
                 sb.append("issues");
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
                 sb.append("&filter=volume:");
                 sb.append(searchTermOrCvID);
 
                 //query = "http://comicvine.gamespot.com/api/issues/?api_key=YOUR_KEY&format=json&filter=volume:51195";
                 break;
             }
-            case constants.getIssuesForSearchTerm: {
+            case Constants.getIssuesForSearchTerm: {
 
                 sb.append("search");
                 sb.append("/?api_key=");
                 sb.append(apiKey);
                 sb.append("&format=");
-                sb.append(constants.cvFormat);
+                sb.append(Constants.cvFormat);
                 sb.append("&offset=");
                 sb.append(String.valueOf(cvOffset));
                 sb.append("&limit=");
-                sb.append(constants.cvLimit);
+                sb.append(Constants.cvLimit);
                 sb.append("&sort=");
-                sb.append(constants.sortedByName);
+                sb.append(Constants.sortedByName);
                 sb.append("&resources=issue");
                 sb.append("&query=");
                 sb.append(searchTermOrCvID);
@@ -238,6 +238,8 @@ public final class Utils {
                 //query = "http://comicvine.gamespot.com/api/search/?api_key=YOUR_KEY&format=json&sort=name:asc&resources=issue&query=D4ve";
                 break;
             }
+            default:
+                break;
         }
 
         return sb.toString();
@@ -246,7 +248,11 @@ public final class Utils {
     // http://stackoverflow.com/questions/14981307/how-to-set-multiple-spans-on-a-textviews-text-on-the-same-partial-text
     private static class SimpleSpanBuilder {
 
+        private List<SpanSection> spanSections;
+        private StringBuilder stringBuilder;
+
         private class SpanSection {
+
             private final String text;
             private final int startIndex;
             private final ParcelableSpan[] spans;
@@ -265,9 +271,6 @@ public final class Utils {
                 }
             }
         }
-
-        private List<SpanSection> spanSections;
-        private StringBuilder stringBuilder;
 
         SimpleSpanBuilder() {
             stringBuilder = new StringBuilder();
