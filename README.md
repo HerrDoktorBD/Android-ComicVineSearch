@@ -4,8 +4,6 @@
 Comic Vine Search
 =================
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f5e6dda286ac4a0fa9bb03fbc18a43bd)](https://www.codacy.com/app/HerrDoktorBD/Android-ComicVineSearch?utm_source=github.com&utm_medium=referral&utm_content=HerrDoktorBD/Android-ComicVineSearch&utm_campaign=badger)
-
 ## Description
 
 ComicVineSearch shows how to call the Comic Vine API from Android Java.  The sample app searches for and displays volumes and issues along with their corresponding bitmaps.
